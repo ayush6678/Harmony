@@ -1,6 +1,15 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import Upload from './Upload';
+import Recommend from './Recommend';
+import SearchIcon from '@mui/icons-material/Search';
+import { IconButton } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import AddIcon from '@mui/icons-material/Add';
+import Queue from './Queue.js';
+
 function App() {
+
 
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -24,19 +33,34 @@ function App() {
   }, [isPlaying]);
 
 
-
-
-
   return (
     <div className="App">
-      <h1>Harmony</h1>
-
 
       <div className='sidebar'>
-        <h2>Library</h2>
-        <h2>Liked Songs</h2>
-        <h2>Upload a Song</h2>
+        <IconButton>
+        </IconButton>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+
+        <IconButton>
+          <FavoriteIcon />
+        </IconButton>
+
+        <IconButton>
+          <AddIcon />
+        </IconButton>
+
       </div>
+
+      <div className='recommend'>
+        <Recommend />
+      </div>
+
+      <div className='queue'><Queue />
+        <Upload />
+      </div>
+
 
       <div className='player'>
         <h2>SONG</h2>

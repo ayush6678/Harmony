@@ -1,19 +1,62 @@
-.player {
-  display: flex;
-  /* position: fixed; */
+.App {
+  display: grid;
+  grid-template-columns: 5% auto 35%;
+  grid-template-rows: 87vh 13vh;
 
-  justify-content: space-between;
+  grid-template-areas:
+    "side recc queue"
+    "side player player";
+}
+
+/* .App h1 {
+  background-color: rgba(42, 42, 42, 0.895);
+  color: rgb(255, 255, 255);
+  padding: 1%;
+  width: fit-content;
+  border-radius: 5px;
+  margin: 1%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+} */
+  
+.sidebar {
+
+  grid-area: side;
+
+  background-color: rgb(84, 84, 84);
+  display: flex;
+  flex-direction: column;
+  
+  border-radius: 0px 10px 10px 0px;
+  margin: 0 1% 0 0;
+  padding: 1%;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.recommend {
+  grid-area: recc;
+
+  margin: 0;
+  /* background-color: aqua; */
+}
+
+.queue {
+  grid-area: queue;
+  margin: 0;
+  /* background-color: blue; */
 }
 
 .player {
-  margin: 1%;
+
+  grid-area: player;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 1%; */
   padding: 1%;
   border: 1px solid black;
   border-radius: 5px;
-  position: absolute;
-  bottom: 0px;
-  width: 95%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(208, 208, 208);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -21,29 +64,7 @@
   width: 90px;
   color: rgb(2, 2, 2);
   background-color: rgb(255, 255, 255);
-  border:0;
+  border: 0;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-
-}
-
-.sidebar {
-  background-color: black;
-  width: fit-content;
-  border-radius: 5px;
-  margin: 1%;
-  padding: 1%;
-  color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.App h1 {
-  background-color: rgba(0, 0, 0, 0.895);
-  color: rgb(255, 255, 255);
-  padding: 1%;
-  width: fit-content;
-  border-radius: 5px;
-  margin: 1%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

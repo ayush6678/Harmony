@@ -1,0 +1,23 @@
+.Upload{
+    margin: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    border-radius: 7px;
+    
+}
+.Upload h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.Upload button{
+    cursor: pointer;
+    color:white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px;
+}
+.Upload Input{
+    border: 0;
+    cursor: pointer;
+    color: white;
+}
