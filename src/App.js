@@ -4,12 +4,12 @@ import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddIcon from '@mui/icons-material/Add';
-import Queue from './Queue.js';
 function App() {
   return (
     <div className="App">
 
       <div className='sidebar'>
+        
 
         <IconButton>
           <SearchIcon sx={{color:'white'}}/>
