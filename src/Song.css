@@ -1,0 +1,31 @@
+.song{
+    transition: box-shadow 0.15s ease-in-out;
+}
+.song img{
+    max-height: 170px;
+}
+.song:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.03)
+}
+.song h4{
+    color: gray;
+     margin-top: -10px;
+}
+
+@media (max-width: 768px){
+    .song img{
+        height: 50px;
+        width: 50px;
+        padding-right: 10px;
+    }
+    .song{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+    }
+    .song h4{
+        padding: 1%;
+        margin:0;
+    }
+}

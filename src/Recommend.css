@@ -1,9 +1,42 @@
 .main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 2%;
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+        "search queue"
+        "songs queue"
+        "Player queue";
 
+}
+
+.search {
+    grid-area: search;
+    padding: 1%;
+}
+
+
+.songs {
+    grid-area: songs;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.Player {
+    grid-area: Player;
+
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+}
+
+.queue {
+    grid-area: queue;
 }
 
 .main input {
@@ -21,4 +54,65 @@
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     font-size: 1.2rem;
+}
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(73, 73, 73);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #212121;
+}
+
+
+
+
+
+.songListing {
+    /* gap: 5px; */
+}
+
+@media (max-width: 768px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: 15vh 70vh 15vh;
+        grid-template-areas: 
+        "search"
+        "songs"
+        "Player";
+    }
+    .search{
+        margin-bottom: 10px;
+        flex:1;
+    }
+    .search input{
+        width: 96vw;
+    }
+    .songs{
+        min-height: 76vh;
+
+    }
+    .queue{
+        display: none;
+    }
+    .Player{
+        position: absolute;
+        width:96vw;
+        bottom: 0;
+        flex-shrink: 0;
+        flex:1;
+
+    }
 }
