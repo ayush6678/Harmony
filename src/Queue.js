@@ -33,7 +33,7 @@ function Queue({ songs }) {
                     {songs.map((song) => {
                         return (
                             <div className="miniList">
-                                <img src={song.image} width={"20%"} height={"20%"} />
+                                <img src={song.image} width={"20%"} height={"20%"} alt="songArt"/>
                                 <div style={{fontSize:"smaller"}}>
                                     {song.name}<br/>
                                     {song.auth}
