@@ -51,7 +51,7 @@ function Upload() {
                 getDownloadURL(uploadTask.snapshot.ref).then((url) => {
                     console.log(url);
 
-                    axios.post("http://localhost:3001/songData", {
+                    axios.post("https://harmony-backend-1rjg.onrender.com/songData", {
                         name: name,
                         auth: auth,
                         image: image,

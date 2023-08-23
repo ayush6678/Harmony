@@ -16,7 +16,7 @@ function Recommend() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:3001/fetchData").then(res => {
+        axios.get("https://harmony-backend-1rjg.onrender.com/fetchData").then(res => {
             setSongs(res.data);
         });
     }, []);
