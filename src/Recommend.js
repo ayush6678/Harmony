@@ -20,7 +20,7 @@ function Recommend() {
 
 
     useEffect(() => {
-        axios.get("https://harmony-backend-1rjg.onrender.com/fetchData").then(res => {
+        axios.get("http://localhost:3001/fetchData").then(res => {
             setSongs(res.data);
         });
     }, []);
@@ -122,8 +122,8 @@ function Recommend() {
                         {songs.map((song) => {
                             return (
                                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}>
-                                    <div style={{ borderRadius: '50%', overflow: 'hidden' }}>
-                                        <img src={song.image} width='25px' height='25px' alt="songArt" />
+                                    <div style={{overflow: 'hidden' }}>
+                                        <img src={song.image} width='25px' borderRadius= '12.5px' height='25px' alt="songArt" />
                                     </div>
                                     <div style={{ fontSize: "smaller", marginLeft: '15px' }}>
                                         {song.name}<br />
